@@ -1,4 +1,3 @@
-
 import React from "react";
 
 export default function Home() {
@@ -39,12 +38,12 @@ export default function Home() {
           display:flex;
           justify-content:center;
           align-items:center;
-          padding:40px 20px;
+          padding:24px;
 
           background:
-            radial-gradient(circle at top left, rgba(255,138,0,0.16), transparent 28%),
-            radial-gradient(circle at bottom right, rgba(0,255,153,0.12), transparent 30%),
-            linear-gradient(135deg,#040404,#090909,#050505);
+            radial-gradient(circle at 10% 10%, rgba(255,138,0,0.12), transparent 30%),
+            radial-gradient(circle at 90% 90%, rgba(0,255,153,0.08), transparent 35%),
+            linear-gradient(135deg,#030303,#080808,#040404);
         }
 
         /* ================= PREMIUM GLOW ================= */
@@ -54,35 +53,35 @@ export default function Home() {
         .purple-glow{
           position:absolute;
           border-radius:50%;
-          filter:blur(140px);
-          animation:floatGlow 12s ease-in-out infinite;
+          filter:blur(130px);
+          animation:floatGlow 14s ease-in-out infinite;
           pointer-events:none;
         }
 
         .orange-glow{
-          width:420px;
-          height:420px;
-          background:rgba(255,138,0,0.28);
-          top:-140px;
-          left:-140px;
+          width:380px;
+          height:380px;
+          background:rgba(255,138,0,0.22);
+          top:-100px;
+          left:-100px;
         }
 
         .green-glow{
-          width:420px;
-          height:420px;
-          background:rgba(0,255,153,0.18);
-          bottom:-140px;
-          right:-140px;
-          animation-duration:15s;
+          width:380px;
+          height:380px;
+          background:rgba(0,255,153,0.14);
+          bottom:-100px;
+          right:-100px;
+          animation-duration:17s;
         }
 
         .purple-glow{
-          width:320px;
-          height:320px;
-          background:rgba(130,80,255,0.15);
-          top:40%;
-          left:45%;
-          animation-duration:18s;
+          width:280px;
+          height:280px;
+          background:rgba(130,80,255,0.1);
+          top:35%;
+          left:40%;
+          animation-duration:20s;
         }
 
         @keyframes floatGlow{
@@ -91,7 +90,7 @@ export default function Home() {
           }
 
           50%{
-            transform:translateY(20px) translateX(12px) scale(1.08);
+            transform:translateY(15px) translateX(10px) scale(1.05);
           }
 
           100%{
@@ -103,40 +102,40 @@ export default function Home() {
 
         .particle{
           position:absolute;
-          width:5px;
-          height:5px;
+          width:4px;
+          height:4px;
           border-radius:50%;
-          background:rgba(255,255,255,0.35);
-          animation:particles 15s linear infinite;
+          background:rgba(255,255,255,0.25);
+          animation:particles 16s linear infinite;
         }
 
         .particle:nth-child(1){
-          top:12%;
-          left:15%;
+          top:15%;
+          left:20%;
         }
 
         .particle:nth-child(2){
-          top:70%;
-          left:80%;
-          animation-duration:17s;
+          top:75%;
+          left:85%;
+          animation-duration:18s;
         }
 
         .particle:nth-child(3){
-          top:55%;
-          left:10%;
-          animation-duration:13s;
+          top:60%;
+          left:12%;
+          animation-duration:14s;
         }
 
         .particle:nth-child(4){
-          top:85%;
-          left:45%;
-          animation-duration:19s;
+          top:88%;
+          left:50%;
+          animation-duration:20s;
         }
 
         .particle:nth-child(5){
-          top:20%;
-          left:70%;
-          animation-duration:14s;
+          top:25%;
+          left:75%;
+          animation-duration:15s;
         }
 
         @keyframes particles{
@@ -150,7 +149,7 @@ export default function Home() {
           }
 
           100%{
-            transform:translateY(-90px) scale(1.6);
+            transform:translateY(-80px) scale(1.4);
             opacity:0;
           }
         }
@@ -162,11 +161,11 @@ export default function Home() {
           z-index:10;
 
           width:100%;
-          max-width:1020px;
+          max-width:920px;
 
-          padding:80px 55px;
+          padding:36px 48px;
 
-          border-radius:42px;
+          border-radius:24px;
 
           text-align:center;
 
@@ -175,33 +174,34 @@ export default function Home() {
           background:
             linear-gradient(
               145deg,
-              rgba(255,255,255,0.08),
-              rgba(255,255,255,0.03)
+              rgba(255,255,255,0.05),
+              rgba(255,255,255,0.01)
             );
 
-          backdrop-filter:blur(24px);
+          backdrop-filter:blur(32px);
+          -webkit-backdrop-filter:blur(32px);
 
-          border:1px solid rgba(255,255,255,0.08);
+          border:1px solid rgba(255,255,255,0.06);
 
           box-shadow:
-            0 20px 60px rgba(0,0,0,0.65),
+            0 30px 70px rgba(0,0,0,0.75),
             inset 0 1px 0 rgba(255,255,255,0.08);
 
-          animation:cardReveal 1.4s cubic-bezier(.16,1,.3,1);
+          animation:cardReveal 1.2s cubic-bezier(.16,1,.3,1);
         }
 
         .main-card::before{
           content:"";
           position:absolute;
           inset:0;
-          border-radius:42px;
+          border-radius:24px;
           padding:1px;
 
           background:linear-gradient(
             135deg,
-            rgba(255,138,0,0.45),
-            rgba(0,255,153,0.22),
-            transparent
+            rgba(255,138,0,0.35),
+            rgba(0,255,153,0.15),
+            transparent 60%
           );
 
           -webkit-mask:
@@ -217,7 +217,7 @@ export default function Home() {
         @keyframes cardReveal{
           from{
             opacity:0;
-            transform:translateY(40px) scale(0.96);
+            transform:translateY(30px) scale(0.97);
           }
 
           to{
@@ -229,41 +229,46 @@ export default function Home() {
         /* ================= COMING SOON ================= */
 
         .coming{
-          display:flex;
+          display:inline-flex;
           justify-content:center;
-          flex-wrap:wrap;
-          gap:8px;
-          margin-bottom:35px;
+          align-items:center;
+          gap:4px;
+          margin-bottom:18px;
+          padding: 6px 16px;
+          background: rgba(255,138,0,0.06);
+          border: 1px solid rgba(255,138,0,0.15);
+          border-radius: 30px;
         }
 
         .coming span{
-          font-size:24px;
+          font-size:11px;
           font-weight:700;
-          letter-spacing:5px;
+          letter-spacing:2px;
+          text-transform:uppercase;
 
           color:var(--orange);
 
           opacity:0;
 
-          transform:translateY(35px);
+          transform:translateY(10px);
 
-          animation:letterReveal 0.8s forwards;
+          animation:letterReveal 0.6s cubic-bezier(.16,1,.3,1) forwards;
 
           text-shadow:
-            0 0 18px rgba(255,138,0,0.35);
+            0 0 10px rgba(255,138,0,0.2);
         }
 
-        .coming span:nth-child(1){animation-delay:0.1s;}
-        .coming span:nth-child(2){animation-delay:0.18s;}
-        .coming span:nth-child(3){animation-delay:0.26s;}
-        .coming span:nth-child(4){animation-delay:0.34s;}
-        .coming span:nth-child(5){animation-delay:0.42s;}
-        .coming span:nth-child(6){animation-delay:0.50s;}
-        .coming span:nth-child(7){animation-delay:0.58s;}
-        .coming span:nth-child(8){animation-delay:0.66s;}
-        .coming span:nth-child(9){animation-delay:0.74s;}
-        .coming span:nth-child(10){animation-delay:0.82s;}
-        .coming span:nth-child(11){animation-delay:0.90s;}
+        .coming span:nth-child(1){animation-delay:0.05s;}
+        .coming span:nth-child(2){animation-delay:0.09s;}
+        .coming span:nth-child(3){animation-delay:0.13s;}
+        .coming span:nth-child(4){animation-delay:0.17s;}
+        .coming span:nth-child(5){animation-delay:0.21s;}
+        .coming span:nth-child(6){animation-delay:0.25s;}
+        .coming span:nth-child(7){animation-delay:0.29s;}
+        .coming span:nth-child(8){animation-delay:0.33s;}
+        .coming span:nth-child(9){animation-delay:0.37s;}
+        .coming span:nth-child(10){animation-delay:0.41s;}
+        .coming span:nth-child(11){animation-delay:0.45s;}
 
         @keyframes letterReveal{
           to{
@@ -277,44 +282,47 @@ export default function Home() {
         .logo-wrapper{
           display:flex;
           justify-content:center;
-          align-items:flex-end;
-          margin-bottom:30px;
+          align-items:baseline;
+          margin-bottom:16px;
         }
 
         .logo{
           position:relative;
           display:flex;
-          align-items:flex-end;
+          align-items:baseline;
           cursor:pointer;
-          transition:0.5s ease;
+          transition:transform 0.4s cubic-bezier(.16,1,.3,1);
         }
 
         .logo-main{
-          font-size:120px;
-          font-weight:900;
+          font-size:64px;
+          font-weight:800;
           line-height:1;
 
-          letter-spacing:4px;
+          letter-spacing:-1.5px;
 
           color:#ffffff;
 
           text-transform:uppercase;
 
-          text-shadow:
-            0 0 30px rgba(255,255,255,0.08),
-            0 0 60px rgba(255,138,0,0.08);
+          background: linear-gradient(to bottom, #ffffff 60%, #e0e0e0 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
 
-          transition:0.5s ease;
+          text-shadow:
+            0 0 30px rgba(255,255,255,0.05);
+
+          transition:0.4s ease;
         }
 
         .logo-sub{
-          font-size:52px;
-          font-weight:700;
+          font-size:28px;
+          font-weight:800;
+          line-height:1;
 
-          margin-left:5px;
-          margin-bottom:12px;
+          margin-left:2px;
 
-          letter-spacing:2px;
+          letter-spacing:-0.5px;
 
           background:linear-gradient(
             135deg,
@@ -325,36 +333,35 @@ export default function Home() {
           -webkit-background-clip:text;
           -webkit-text-fill-color:transparent;
 
-          text-shadow:
-            0 0 25px rgba(255,138,0,0.3);
+          filter: drop-shadow(0 2px 8px rgba(255,138,0,0.3));
 
-          transition:0.5s ease;
+          transition:0.4s ease;
         }
 
         .logo::before{
           content:"";
           position:absolute;
 
-          width:180px;
-          height:180px;
+          width:100px;
+          height:100px;
 
           background:radial-gradient(
             circle,
-            rgba(255,138,0,0.18),
+            rgba(255,138,0,0.15),
             transparent 70%
           );
 
-          filter:blur(35px);
+          filter:blur(20px);
 
           z-index:-1;
 
           opacity:0;
 
-          transition:0.5s ease;
+          transition:opacity 0.4s ease;
         }
 
         .logo:hover{
-          transform:translateY(-3px) scale(1.02);
+          transform:translateY(-2px) scale(1.01);
         }
 
         .logo:hover::before{
@@ -362,30 +369,27 @@ export default function Home() {
         }
 
         .logo:hover .logo-sub{
-          transform:translateY(-2px);
-          filter:brightness(1.1);
+          filter: brightness(1.1) drop-shadow(0 2px 10px rgba(255,138,0,0.4));
         }
 
         /* ================= DESCRIPTION ================= */
 
         .desc{
-          max-width:760px;
+          max-width:560px;
 
-          margin:auto;
+          margin:0 auto 20px auto;
 
-          color:var(--text);
+          color:rgba(255,255,255,0.7);
 
-          font-size:20px;
+          font-size:14px;
 
-          line-height:2;
+          line-height:1.6;
 
           font-weight:400;
 
-          letter-spacing:0.3px;
+          letter-spacing:0.1px;
 
-          margin-bottom:50px;
-
-          animation:fadeSoft 1.8s ease;
+          animation:fadeSoft 1.5s ease;
         }
 
         @keyframes fadeSoft{
@@ -405,21 +409,21 @@ export default function Home() {
 
           overflow:hidden;
 
-          padding:18px 52px;
+          padding:12px 32px;
 
           border:none;
           outline:none;
 
-          border-radius:70px;
+          border-radius:30px;
 
           cursor:pointer;
 
-          font-size:16px;
-          font-weight:700;
+          font-size:13.5px;
+          font-weight:600;
 
-          letter-spacing:0.5px;
+          letter-spacing:0.2px;
 
-          color:#000;
+          color:#000000;
 
           background:linear-gradient(
             135deg,
@@ -427,11 +431,11 @@ export default function Home() {
             var(--green)
           );
 
-          transition:all 0.45s cubic-bezier(.16,1,.3,1);
+          transition:all 0.4s cubic-bezier(.16,1,.3,1);
 
           box-shadow:
-            0 15px 40px rgba(255,138,0,0.25),
-            0 5px 25px rgba(0,255,153,0.12);
+            0 8px 24px rgba(255,138,0,0.2),
+            inset 0 1px 0 rgba(255,255,255,0.4);
         }
 
         .btn::before{
@@ -447,11 +451,17 @@ export default function Home() {
           background:linear-gradient(
             120deg,
             transparent,
-            rgba(255,255,255,0.55),
+            rgba(255,255,255,0.45),
             transparent
           );
 
-          transition:0.7s;
+          transition:0.6s;
+          z-index: 1;
+        }
+
+        .btn span {
+          position: relative;
+          z-index: 2;
         }
 
         .btn:hover::before{
@@ -459,47 +469,48 @@ export default function Home() {
         }
 
         .btn:hover{
-          transform:translateY(-6px) scale(1.04);
+          transform:translateY(-2px);
 
           box-shadow:
-            0 20px 55px rgba(255,138,0,0.4),
-            0 10px 35px rgba(0,255,153,0.18);
+            0 12px 30px rgba(255,138,0,0.35),
+            inset 0 1px 0 rgba(255,255,255,0.5);
         }
 
         /* ================= CONTACT ================= */
 
         .contact-box{
-          margin-top:75px;
+          margin-top:28px;
 
-          padding:40px;
+          padding:18px 24px;
 
-          border-radius:32px;
+          border-radius:16px;
 
-          background:
-            linear-gradient(
-              145deg,
-              rgba(255,255,255,0.04),
-              rgba(255,255,255,0.02)
-            );
+          background:rgba(255, 255, 255, 0.02);
 
-          border:1px solid rgba(255,255,255,0.06);
+          border:1px solid rgba(255,255,255,0.04);
 
-          backdrop-filter:blur(14px);
+          backdrop-filter:blur(20px);
+          -webkit-backdrop-filter:blur(20px);
         }
 
         .contact-title{
-          font-size:36px;
+          font-size:11px;
           font-weight:700;
+          text-transform:uppercase;
+          letter-spacing:1.5px;
 
-          margin-bottom:30px;
+          margin-bottom:12px;
 
-          color:var(--white);
+          color:rgba(255,255,255,0.4);
         }
 
-        .contact-list{
+        .contact-content{
           display:flex;
-          flex-direction:column;
-          gap:18px;
+          flex-direction:row;
+          justify-content:center;
+          align-items:stretch;
+          flex-wrap:wrap;
+          gap:12px;
         }
 
         .contact-item{
@@ -507,20 +518,32 @@ export default function Home() {
 
           overflow:hidden;
 
-          padding:18px 24px;
+          padding:10px 16px;
 
-          border-radius:18px;
+          border-radius:12px;
 
-          background:rgba(255,255,255,0.03);
+          background:rgba(255,255,255,0.015);
 
-          color:#d9d9d9;
+          color:rgba(255,255,255,0.85);
 
-          font-size:17px;
+          font-size:13px;
           font-weight:500;
+          letter-spacing:0.1px;
 
-          border:1px solid rgba(255,255,255,0.05);
+          border:1px solid rgba(255,255,255,0.03);
 
-          transition:all 0.4s cubic-bezier(.16,1,.3,1);
+          transition:all 0.3s cubic-bezier(.16,1,.3,1);
+
+          display:flex;
+          align-items:center;
+          gap:8px;
+        }
+
+        .contact-icon{
+          font-size: 14px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .contact-item::before{
@@ -531,14 +554,14 @@ export default function Home() {
           inset:0;
 
           background:linear-gradient(
-            90deg,
-            rgba(255,138,0,0.08),
-            rgba(0,255,153,0.08)
+            135deg,
+            rgba(255,138,0,0.04),
+            rgba(0,255,153,0.04)
           );
 
           opacity:0;
 
-          transition:0.4s;
+          transition:opacity 0.3s ease;
         }
 
         .contact-item:hover::before{
@@ -546,88 +569,26 @@ export default function Home() {
         }
 
         .contact-item:hover{
-          transform:translateY(-4px);
+          transform:translateY(-2px);
 
           border-color:rgba(255,255,255,0.1);
-
-          box-shadow:
-            0 12px 25px rgba(0,0,0,0.25);
-        }
-
-        /* ================= EMAILS ================= */
-
-        .contact-emails{
-          margin-top:10px;
-
-          display:flex;
-          flex-direction:column;
-          gap:16px;
-        }
-
-        .premium-mail{
-          position:relative;
-
-          overflow:hidden;
-
-          padding:18px 24px;
-
-          border-radius:18px;
-
           background:rgba(255,255,255,0.03);
-
-          border:1px solid rgba(255,255,255,0.06);
-
-          color:#d7d7d7;
-
-          font-size:15px;
-          font-weight:500;
-
-          letter-spacing:0.3px;
-
-          transition:all 0.4s cubic-bezier(.16,1,.3,1);
-        }
-
-        .premium-mail::before{
-          content:"";
-
-          position:absolute;
-
-          inset:0;
-
-          background:linear-gradient(
-            90deg,
-            rgba(255,138,0,0.08),
-            rgba(0,255,153,0.08)
-          );
-
-          opacity:0;
-
-          transition:0.4s;
-        }
-
-        .premium-mail:hover::before{
-          opacity:1;
-        }
-
-        .premium-mail:hover{
-          transform:translateY(-4px);
-
-          border-color:rgba(255,255,255,0.1);
+          color:#ffffff;
 
           box-shadow:
-            0 12px 30px rgba(0,0,0,0.25);
+            0 8px 20px rgba(0,0,0,0.35);
         }
 
         /* ================= FOOTER ================= */
 
         .footer{
-          margin-top:45px;
+          margin-top:20px;
 
-          color:#8f8f8f;
+          color:rgba(255,255,255,0.3);
 
-          font-size:14px;
+          font-size:11px;
 
-          letter-spacing:1px;
+          letter-spacing:0.5px;
         }
 
         /* ================= RESPONSIVE ================= */
@@ -635,80 +596,102 @@ export default function Home() {
         @media(max-width:992px){
 
           .main-card{
-            padding:60px 35px;
+            padding:30px 32px;
           }
 
           .logo-main{
-            font-size:88px;
+            font-size:56px;
           }
 
           .logo-sub{
-            font-size:40px;
+            font-size:24px;
           }
 
           .desc{
-            font-size:18px;
+            font-size:13.5px;
           }
         }
 
         @media(max-width:768px){
 
           .logo-main{
-            font-size:66px;
+            font-size:48px;
           }
 
           .logo-sub{
-            font-size:30px;
-            margin-bottom:8px;
+            font-size:20px;
+          }
+
+          .coming{
+            padding:4px 12px;
           }
 
           .coming span{
-            font-size:18px;
-            letter-spacing:2px;
+            font-size:10px;
+            letter-spacing:1.5px;
           }
 
           .desc{
-            font-size:16px;
-            line-height:1.9;
+            font-size:13px;
+            line-height:1.5;
           }
 
           .contact-title{
-            font-size:28px;
+            font-size:10px;
           }
 
-          .contact-item,
-          .premium-mail{
-            font-size:15px;
+          .contact-item{
+            font-size:12px;
+            padding: 8px 12px;
           }
         }
 
         @media(max-width:480px){
 
+          .home-container{
+            padding:12px;
+          }
+
           .main-card{
-            padding:45px 20px;
-            border-radius:28px;
+            padding:20px 16px;
+            border-radius:18px;
+          }
+
+          .main-card::before{
+            border-radius:18px;
           }
 
           .logo-main{
-            font-size:48px;
+            font-size:36px;
           }
 
           .logo-sub{
-            font-size:24px;
-            margin-left:3px;
-            margin-bottom:5px;
+            font-size:16px;
+            margin-left:2px;
           }
 
           .btn{
             width:100%;
+            padding: 10px 24px;
           }
 
           .desc{
-            font-size:15px;
+            font-size:12.5px;
           }
 
           .contact-box{
-            padding:24px 18px;
+            padding:14px 12px;
+            border-radius:14px;
+          }
+
+          .contact-content{
+            flex-direction:column;
+            align-items:stretch;
+          }
+
+          .contact-item{
+            justify-content:center;
+            border-radius:10px;
           }
         }
 
@@ -759,15 +742,13 @@ export default function Home() {
           {/* DESCRIPTION */}
 
           <p className="desc">
-            We’re building a smarter, faster, and premium future shopping
-            experience with next-generation billing and seamless digital
-            innovation.
+            We provide software services.
           </p>
 
           {/* BUTTON */}
 
           <button className="btn">
-            Launching Soon
+            <span>Launching Soon</span>
           </button>
 
           {/* CONTACT */}
@@ -778,24 +759,21 @@ export default function Home() {
               Contact Us
             </h2>
 
-            <div className="contact-list">
+            <div className="contact-content">
 
               <div className="contact-item">
-                📍 Visakhapatnam, Andhra Pradesh, India
+                <span className="contact-icon">📍</span>
+                <span>Visakhapatnam, Andhra Pradesh, India</span>
               </div>
 
-            </div>
-
-            {/* EMAILS */}
-
-            <div className="contact-emails">
-
-              <div className="premium-mail">
-                ✉️ support@checkmee.com
+              <div className="contact-item">
+                <span className="contact-icon">✉️</span>
+                <span>support@checkmee.com</span>
               </div>
 
-              <div className="premium-mail">
-                ✉️ vandana.hr.cfo@check-mee.com
+              <div className="contact-item">
+                <span className="contact-icon">✉️</span>
+                <span>vandana.hr.cfo@check-mee.com</span>
               </div>
 
             </div>
